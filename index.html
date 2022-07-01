@@ -20,7 +20,11 @@ var x = setInterval(function() {
     
   document.getElementById("countdown").innerHTML = days;
     
-},);
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "0";
+  }
+}, 1000);
 </script>
 
 </body>
